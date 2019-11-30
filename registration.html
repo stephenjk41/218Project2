@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Open Forum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Register</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="login-page">
+        <div class="form">
+            <h2>Register</h2>
+            <form action="registration.php" method="post">
+                <label for="fname">* First Name: </label>
+                <input type="text" name="fname" id="fname"> <span class="error"> <?php echo $firstNameError; ?>
+                </span><br><br>
+
+                <label for="lname">* Last Name: </label>
+                <input type="text" name="lname" id="lname"> <span class="error"> <?php echo $lastNameError; ?>
+                </span><br><br>
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" name="birthday" id="birthday"> *<span class="error">
+                    <?php echo $birthdayError; ?>
+                </span> <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email"> *<span class="error">
+                    <?php echo $emailError;?></span><br><br>
+
+                <label for="password">* Password:</label>
+                <input type="password" name="password" id="password"> <span class="error">
+                    <?php echo $emailError;?></span><br><br>
+                <p><span class="error"> * required field</span></p>
+                <input type="submit" value="Register">
+                <p class="message">Already registered? <a href="login.html">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
